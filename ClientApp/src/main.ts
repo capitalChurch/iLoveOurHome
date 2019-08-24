@@ -10,3 +10,20 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
+declare global{
+  interface Array<T>{
+    findOrFirst: (predicate:(value: T, index: number, lst: T[]) => boolean) => T
+    findOrResult: (predicate:(value: T, index: number, lst: T[]) => boolean, result: T) => T
+  }
+}
+
+Array.prototype.findOrResult = function<T>(predicate:(value: T, index: number, lst: T[]) => boolean, result: T){
+  return this.find(predicate) || result;
+};
+
+
+Array.prototype.findOrFirst = function<T>(predicate:(value: T, index: number, lst: T[]) => boolean){
+  return this.find(predicate) || this[0];
+};
+

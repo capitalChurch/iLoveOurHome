@@ -16,4 +16,9 @@
         <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <TypeScriptCompile Include="ClientApp\src\model\resource.ts" />
+      <TypeScriptCompile Include="ClientApp\src\service\translateService.ts" />
+    </ItemGroup>
+
 </Project>

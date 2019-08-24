@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+@font-face {
+  font-family: Biotif;
+  font-weight: normal;
+  src: local("Biotif"), url("./assets/fonts/Biotif-Medium.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: Biotif;
+  font-weight: 100;
+  src: local('Biotif-Black'), url("./assets/fonts/Biotif-Black.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: Biotif;
+  font-weight: bold;
+  src: local('Biotif-Black'), url("./assets/fonts/Biotif-Bold.ttf") format('truetype');
+}
+
+body, html{
+  margin: 0;
+}
