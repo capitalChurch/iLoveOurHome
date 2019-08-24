@@ -1,0 +1,33 @@
+@import "../../theme";
+
+.menu{
+  width: 100vw;
+  background-color: $primaryColor;
+
+  display: flex;
+  justify-content: center;
+  padding: 40px 0 20px 0;
+
+  .imageWrapper{
+    img{
+      height: 60px;
+    }
+  }
+
+  .options{
+    display: flex;
+    align-items: flex-end;
+
+    padding: 0 16px;
+    a{
+      color: white;
+      text-decoration: none;
+      padding: 8px;
+      font-weight: bold;
+
+      .active{
+        color: $accentColor;
+      }
+    }
+  }
+}
