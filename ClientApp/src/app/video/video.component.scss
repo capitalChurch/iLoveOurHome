@@ -1,0 +1,22 @@
+.campaignVideo{
+  $sizePadding: 40px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  padding: $sizePadding 0;
+
+  img{
+    width: calc(30vw + 100px);
+    padding: $sizePadding 0;
+    cursor: pointer;
+  }
+
+  .youtubeVideo{
+
+    iframe{
+      width: calc(30vw + 100px);
+      height: 15vw;
+    }
+  }
+}
