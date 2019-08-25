@@ -20,6 +20,7 @@ export interface LanguageResource {
 
   video: {
     title: string;
+    idVideo: string;
     link: string;
   };
 

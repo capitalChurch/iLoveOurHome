@@ -2,7 +2,7 @@ import {LanguageResource} from "../../model/languageResource";
 
 export const en: LanguageResource =
 {
-  titleBrowser: 'I Love My Home',
+  titleBrowser: 'I Love Our Home',
   menu:{
     home: "home",
     getInvolved: "get involved",
@@ -12,14 +12,15 @@ export const en: LanguageResource =
     contact: "contact"
   },
   iLoveMyHome:{
-    title: "i love my home",
+    title: "i love our home",
     instagram: "https://www.instagram.com/batistadacapital/",
     facebook: "https://www.facebook.com/igrejabcapital/",
     twitter: "https://twitter.com/igrejabcapital"
   },
   video: {
     title: "watch the campaign video",
-    link: "https://www.youtube.com/channel/UCqerswd3sFt3m8PsN4DBW1g"
+    idVideo: 'fMP92MfVNR0',
+    link: "https://www.youtube.com/embed/fMP92MfVNR0"
   },
   loveOffer: {
     title: "love offer",
