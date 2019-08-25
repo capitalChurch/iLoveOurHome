@@ -11,6 +11,7 @@ import {LanguageResource} from "../../model/languageResource";
 export class VideoComponent implements OnInit {
 
   public url: SafeUrl;
+  public t: LanguageResource;
   public buttonPlayWasPressed: boolean = false;
 
   constructor(private translateService: TranslateService, private sanitizer: DomSanitizer) {
@@ -25,10 +26,11 @@ export class VideoComponent implements OnInit {
   };
 
   private subscribe = (): void => {
-    this.translateService.resource.subscribe(this.updateUrl);
+    this.translateService.resource.subscribe(this.updateResources);
   };
 
-  private updateUrl = (lang: LanguageResource): void => {
+  private updateResources = (lang: LanguageResource): void => {
     this.url = this.sanitizer.bypassSecurityTrustResourceUrl(lang.video.link);
+    this.t = lang;
   }
 }

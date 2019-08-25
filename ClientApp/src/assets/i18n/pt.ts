@@ -20,7 +20,7 @@ export const pt: LanguageResource =
   video: {
     title: "assista o vídeo da campanha",
     idVideo: 'fMP92MfVNR0',
-    link: "https://www.youtube.com/channel/UCqerswd3sFt3m8PsN4DBW1g"
+    link: "https://www.youtube.com/embed/fMP92MfVNR0"
   },
   loveOffer: {
     title: "oferta de amor",
