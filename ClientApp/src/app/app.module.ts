@@ -7,6 +7,8 @@ import {TranslateService} from "../service/translateService";
 import { HomeComponent } from './home/home.component';
 import { VideoComponent } from './video/video.component';
 import {TranslatePipe} from "../pipes/translate.pipe";
+import { LoveOfferComponent } from './love-offer/love-offer.component';
+import { ButtonPersonalizedComponent } from './components/button-personalized/button-personalized.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import {TranslatePipe} from "../pipes/translate.pipe";
     MenuComponent,
     TranslatePipe,
     HomeComponent,
-    VideoComponent
+    VideoComponent,
+    LoveOfferComponent,
+    ButtonPersonalizedComponent
   ],
   imports: [
     BrowserModule

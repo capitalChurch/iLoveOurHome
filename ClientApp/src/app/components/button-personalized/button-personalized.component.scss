@@ -1,0 +1,67 @@
+@import "../../../theme";
+
+.buttonPersonalized {
+  position: relative;
+  cursor: pointer;
+
+  &:hover .backgroundButton{
+    transform: scale(1.01);
+
+    &:before{
+      top: 28px;
+      left: 18px;
+    }
+  }
+
+  .backgroundButton {
+    $radiusButton: 8px;
+    transition: all ease-out .1s;
+
+    position: relative;
+
+    .wrapperButton {
+      background-color: $accentColor;
+      padding: 2px 0 16px 0;
+
+      border-radius: $radiusButton;
+      position: relative;
+
+      .button {
+        position: relative;
+        color: white;
+        background-color: $thirdColor;
+        padding: 12px 24px;
+
+        border-radius: $radiusButton;
+
+        span {
+          color: $primaryColor;
+          font-weight: 100;
+          font-size: $h3FontSize;
+        }
+      }
+    }
+
+    &:before {
+      content: '';
+      background-color: $primaryColorDark;
+      position: absolute;
+      top: 24px;
+      left: 12px;
+      width: 100%;
+      height: 90%;
+
+      border-radius: $radiusButton;
+    }
+  }
+
+  .pointerWrapper {
+    position: absolute;
+    bottom: -25px;
+    right: 10px;
+
+    img {
+      height: 50px;
+    }
+  }
+}
