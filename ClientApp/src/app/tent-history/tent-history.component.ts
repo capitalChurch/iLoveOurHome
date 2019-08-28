@@ -17,11 +17,9 @@ export class TentHistoryComponent implements OnInit {
   ngOnInit() {
   }
 
-  public get text(): string{
-    const regex = /\n\n/;
-    const result = this.t.tentHistory.text.replace(/\n\n/, '</p><p>');
-    console.log(result);
-    return result
+
+  public get text(): string[]{
+    return this.t.tentHistory.text.trim().split(/\n\n/g);
   }
 
   private subscribe = (): void => {

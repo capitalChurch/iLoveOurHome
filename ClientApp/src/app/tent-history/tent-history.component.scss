@@ -6,15 +6,18 @@
   display: flex;
   justify-content: center;
 
-  height: 600px;
+  max-height: 800px;
 
   .content {
     max-width: $sectionSize;
 
     display: flex;
     flex-flow: column wrap;
-
+    align-items: flex-start;
     color: white;
+    img{
+      height: 260px;
+    }
 
     .title{
       font-size: $h2FontSize;
@@ -26,8 +29,10 @@
     }
 
     p{
-      max-width: $sectionSize / 2;
+      max-width: calc(#{$sectionSize / 2} - 30px);
       white-space: pre-line;
+      text-align: justify;
+      font-size: 13.5px;
     }
   }
 }
