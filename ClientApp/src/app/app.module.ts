@@ -9,6 +9,7 @@ import { VideoComponent } from './video/video.component';
 import {TranslatePipe} from "../pipes/translate.pipe";
 import { LoveOfferComponent } from './love-offer/love-offer.component';
 import { ButtonPersonalizedComponent } from './components/button-personalized/button-personalized.component';
+import { TentHistoryComponent } from './tent-history/tent-history.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ButtonPersonalizedComponent } from './components/button-personalized/bu
     HomeComponent,
     VideoComponent,
     LoveOfferComponent,
-    ButtonPersonalizedComponent
+    ButtonPersonalizedComponent,
+    TentHistoryComponent
   ],
   imports: [
     BrowserModule

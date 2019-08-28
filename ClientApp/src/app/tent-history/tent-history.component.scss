@@ -1,0 +1,33 @@
+@import "../../theme";
+
+.tentHistory {
+  background: $accentColor;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+
+  height: 600px;
+
+  .content {
+    max-width: $sectionSize;
+
+    display: flex;
+    flex-flow: column wrap;
+
+    color: white;
+
+    .title{
+      font-size: $h2FontSize;
+      line-height: $h2FontSize * .8;
+
+      max-width: $sectionSize / 1.5;
+
+      font-weight: 100;
+    }
+
+    p{
+      max-width: $sectionSize / 2;
+      white-space: pre-line;
+    }
+  }
+}
