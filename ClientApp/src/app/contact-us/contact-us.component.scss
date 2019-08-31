@@ -1,0 +1,37 @@
+@import "../../theme";
+
+.contactUs{
+  background-color: $primaryColor;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: $sectionSize;
+
+    padding: $paddingSection 0;
+    .title{
+      max-width: $sectionSize * .4;
+      font-size: $h2FontSize;
+      line-height: $h2FontSize * .9;
+      color: $accentColor;
+      font-weight: 100;
+    }
+
+    .info{
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+
+      color: white;
+      span:first-child{
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    }
+  }
+}

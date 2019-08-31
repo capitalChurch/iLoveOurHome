@@ -15,6 +15,7 @@ import {registerLocaleData} from "@angular/common";
 import localePt from '@angular/common/locales/pt';
 import {CapitalizarPipe} from "../pipes/capitalizar.pipe";
 import { OfferComponent } from './offer/offer.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 registerLocaleData(localePt);
 
@@ -30,7 +31,8 @@ registerLocaleData(localePt);
     TentHistoryComponent,
     HowMuchIsMissingComponent,
     CapitalizarPipe,
-    OfferComponent
+    OfferComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule
