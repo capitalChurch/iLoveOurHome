@@ -6,7 +6,8 @@
   display: flex;
   justify-content: center;
 
-  max-height: 800px;
+  $heightContainer: 700px;
+  min-height: $heightContainer;
 
   .content {
     max-width: $sectionSize;
@@ -14,22 +15,29 @@
     display: flex;
     flex-flow: column wrap;
     align-content: center;
+    max-height: $heightContainer;
 
     color: white;
-    img{
-      height: 260px;
+
+    .wrapperImage {
+      margin-bottom: 16px;
+      img {
+        height: 260px;
+      }
     }
 
-    .title{
+    .title {
       font-size: $h2FontSize;
       line-height: $h2FontSize * .8;
 
-      max-width: $sectionSize / 1.5;
+      max-width: $sectionSize / 1.85;
 
       font-weight: 100;
+
+      margin: 8px 0;
     }
 
-    p{
+    p {
       max-width: calc(#{$sectionSize / 2} - 30px);
       white-space: pre-line;
       text-align: justify;

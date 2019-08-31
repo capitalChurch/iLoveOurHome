@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -10,6 +10,12 @@ import {TranslatePipe} from "../pipes/translate.pipe";
 import { LoveOfferComponent } from './love-offer/love-offer.component';
 import { ButtonPersonalizedComponent } from './components/button-personalized/button-personalized.component';
 import { TentHistoryComponent } from './tent-history/tent-history.component';
+import { HowMuchIsMissingComponent } from './how-much-is-missing/how-much-is-missing.component';
+import {registerLocaleData} from "@angular/common";
+import localePt from '@angular/common/locales/pt';
+import {CapitalizarPipe} from "../pipes/capitalizar.pipe";
+
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -20,13 +26,16 @@ import { TentHistoryComponent } from './tent-history/tent-history.component';
     VideoComponent,
     LoveOfferComponent,
     ButtonPersonalizedComponent,
-    TentHistoryComponent
+    TentHistoryComponent,
+    HowMuchIsMissingComponent,
+    CapitalizarPipe
   ],
   imports: [
     BrowserModule
   ],
   providers: [
-    TranslateService
+    TranslateService,
+    {provide: LOCALE_ID, useValue: 'pt'}
   ],
   bootstrap: [AppComponent]
 })

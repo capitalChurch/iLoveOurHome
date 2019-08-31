@@ -1,0 +1,60 @@
+@import "../../theme";
+
+.howMuchIsMissing{
+  background-color: $thirdColor;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+
+  .content{
+    padding: 24px 0;
+    max-width: $sectionSize;
+    display: flex;
+    flex-direction: column;
+
+    .title{
+      color: $accentColorDarker;
+      font-size: $h2FontSize;
+      max-width: $sectionSize / 2;
+      line-height: $h2FontSize * .9;
+      font-weight: 100;
+      margin: 16px 0;
+    }
+
+    .actualCollected{
+      color: $primaryColorDark;
+      font-size: $h1FontSize;
+      line-height: $h1FontSize * .9;
+      font-weight: 100;
+      display: flex;
+      align-items: center;
+      margin-top: 16px;
+
+      span:first-child{
+        font-size: $h3FontSize;
+        padding-right: 8px;
+      }
+    }
+
+    .hourGoal{
+      background-color: $primaryColor;
+      color: white;
+      padding: 4px 16px 0 16px;
+      font-size: $h5FontSize;
+      font-weight: 100;
+      margin: 8px 0;
+
+      span:nth-child(2) {
+        color: $accentColorDarker;
+      }
+    }
+
+    .text{
+      color: white;
+      margin: 24px 0;
+      text-align: justify;
+
+      font-size: 14px;
+    }
+  }
+}
