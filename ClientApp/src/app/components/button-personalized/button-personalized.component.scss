@@ -4,15 +4,6 @@
   position: relative;
   cursor: pointer;
 
-  &:hover .backgroundButton{
-    transform: scale(1.01);
-
-    &:before{
-      top: 28px;
-      left: 18px;
-    }
-  }
-
   .backgroundButton {
     $radiusButton: 8px;
 
@@ -29,24 +20,27 @@
         position: relative;
         color: white;
         background-color: $thirdColor;
-        padding: 12px 24px;
 
         border-radius: $radiusButton;
 
         span {
           color: $primaryColor;
           font-weight: 100;
-          font-size: $h4FontSize;
         }
       }
     }
 
+    &.white:before {
+      background-color: $grayColor;
+    }
+
+    &.primary:before {
+      background-color: $primaryColorDark;
+    }
+
     &:before {
       content: '';
-      background-color: $primaryColorDark;
       position: absolute;
-      top: 24px;
-      left: 12px;
       width: 100%;
       height: 90%;
 
@@ -56,11 +50,72 @@
 
   .pointerWrapper {
     position: absolute;
-    bottom: -25px;
-    right: 10px;
 
     img {
       height: 50px;
+    }
+  }
+
+  &:hover .backgroundButton {
+    transform: scale(1.01);
+  }
+
+  &.normal {
+    .backgroundButton {
+      .wrapperButton {
+        .button {
+          padding: 14px 24px 10px 24px;
+
+          span {
+            font-size: $h4FontSize;
+          }
+        }
+      }
+
+      &:before {
+        top: 24px;
+        left: 12px;
+      }
+    }
+
+    .pointerWrapper{
+      bottom: -25px;
+      right: 12px;
+    }
+
+    &:hover .backgroundButton:before {
+      top: 32px;
+      left: 18px;
+    }
+  }
+
+  &.big {
+    .backgroundButton {
+      .wrapperButton {
+        .button {
+          padding: 22px 42px 12px 42px;
+
+          span {
+            font-size: $h1FontSize;
+            line-height: $h1FontSize * .9;
+          }
+        }
+      }
+
+      &:before {
+        top: 32px;
+        left: 16px;
+      }
+    }
+
+    .pointerWrapper{
+      bottom: 0;
+      right: 70px;
+    }
+
+    &:hover .backgroundButton:before {
+      top: 40px;
+      left: 24px;
     }
   }
 }

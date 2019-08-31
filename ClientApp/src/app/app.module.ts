@@ -14,6 +14,7 @@ import { HowMuchIsMissingComponent } from './how-much-is-missing/how-much-is-mis
 import {registerLocaleData} from "@angular/common";
 import localePt from '@angular/common/locales/pt';
 import {CapitalizarPipe} from "../pipes/capitalizar.pipe";
+import { OfferComponent } from './offer/offer.component';
 
 registerLocaleData(localePt);
 
@@ -28,7 +29,8 @@ registerLocaleData(localePt);
     ButtonPersonalizedComponent,
     TentHistoryComponent,
     HowMuchIsMissingComponent,
-    CapitalizarPipe
+    CapitalizarPipe,
+    OfferComponent
   ],
   imports: [
     BrowserModule
