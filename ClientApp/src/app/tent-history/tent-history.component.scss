@@ -6,7 +6,9 @@
   display: flex;
   justify-content: center;
 
-  $heightContainer: 700px;
+  $heightContainer: 750px;
+  $heightOnLaptop: 800px;
+
   min-height: $heightContainer;
 
   .content {
@@ -42,6 +44,14 @@
       white-space: pre-line;
       text-align: justify;
       font-size: 13.5px;
+    }
+  }
+
+  @media only screen and (max-width: $laptopSize){
+    max-height: $heightOnLaptop;
+
+    .content{
+      max-height: $heightOnLaptop;
     }
   }
 }
