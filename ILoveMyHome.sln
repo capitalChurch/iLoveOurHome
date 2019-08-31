@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILoveMyHome", "ILoveMyHome.csproj", "{9DFF6994-8261-496B-9238-5715DAC79C37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILoveMyHome", "ILoveMyHome\ILoveMyHome.csproj", "{9DFF6994-8261-496B-9238-5715DAC79C37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILoveMyHome.Tests", "ILoveMyHome.Tests\ILoveMyHome.Tests.csproj", "{8B649A7F-D01E-4E1A-AB9B-A3756E9758D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +14,9 @@ Global
 		{9DFF6994-8261-496B-9238-5715DAC79C37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DFF6994-8261-496B-9238-5715DAC79C37}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DFF6994-8261-496B-9238-5715DAC79C37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B649A7F-D01E-4E1A-AB9B-A3756E9758D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B649A7F-D01E-4E1A-AB9B-A3756E9758D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B649A7F-D01E-4E1A-AB9B-A3756E9758D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B649A7F-D01E-4E1A-AB9B-A3756E9758D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
