@@ -1,0 +1,43 @@
+@import "../../theme";
+
+.campaignVideo{
+  $sizePadding: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+
+  padding: $sizePadding 0;
+
+  $sizeTv: 40vw;
+  img{
+    width: $sizeTv;
+    padding: $sizePadding 0;
+    cursor: pointer;
+  }
+
+  .youtubeVideo{
+    position: absolute;
+    transform: translateX(-15%);
+    top: calc(#{$sizePadding * 2} + #{$sizeTv * .075});
+
+    iframe{
+      width: $sizeTv * .65;
+      height: $sizeTv * .45;
+      border-radius: 8px;
+    }
+  }
+
+  .title{
+    font-size: $h3FontSize;
+    font-weight: 100;
+    color: $primaryColor;
+  }
+
+  @media only screen and (max-width: $laptopSize) {
+    .title{
+      font-size: $h2FontSizeLaptop;
+    }
+
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../theme";
+
+.tentHistory {
+  background: $accentColor;
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+
+  $heightContainer: 750px;
+  $heightOnLaptop: 800px;
+
+  min-height: $heightContainer;
+
+  .content {
+    max-width: $sectionSize;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    max-height: $heightContainer;
+
+    color: white;
+
+    .wrapperImage {
+      margin-bottom: 16px;
+      img {
+        height: 260px;
+      }
+    }
+
+    .title {
+      font-size: $h2FontSize;
+      line-height: $h2FontSize * .8;
+
+      max-width: $sectionSize / 1.85;
+
+      font-weight: 100;
+
+      margin: 8px 0;
+    }
+
+    p {
+      max-width: calc(#{$sectionSize / 2} - 30px);
+      white-space: pre-line;
+      text-align: justify;
+      font-size: 13.5px;
+    }
+  }
+
+  @media only screen and (max-width: $laptopSize){
+    max-height: $heightOnLaptop;
+
+    .content{
+      max-height: $heightOnLaptop;
+    }
+  }
+}

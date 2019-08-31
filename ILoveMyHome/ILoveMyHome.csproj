@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <LangVersion>8</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AWSSDK.S3" Version="3.3.104.20" />
+        <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <TypeScriptCompile Include="ClientApp\src\model\constants.ts" />
+      <TypeScriptCompile Include="ClientApp\src\service\translateService.ts" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="ILoveMyHome.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="ILoveMyHome.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="ILoveMyHome.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="ILoveMyHome.Tests\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="ILoveMyHome.Tests\bin\Debug\netcoreapp2.1\ILoveMyHome.Tests.deps.json" />
+      <_ContentIncludedByDefault Remove="ILoveMyHome.Tests\bin\Debug\netcoreapp2.1\ILoveMyHome.Tests.runtimeconfig.dev.json" />
+      <_ContentIncludedByDefault Remove="ILoveMyHome.Tests\bin\Debug\netcoreapp2.1\ILoveMyHome.Tests.runtimeconfig.json" />
+      <_ContentIncludedByDefault Remove="ILoveMyHome.Tests\obj\ILoveMyHome.Tests.csproj.nuget.dgspec.json" />
+      <_ContentIncludedByDefault Remove="ILoveMyHome.Tests\obj\project.assets.json" />
+      <_ContentIncludedByDefault Remove="ILoveMyHome.Tests\obj\project.packagespec.json" />
+      <_ContentIncludedByDefault Remove="ILoveMyHome.Tests\bin\Debug\netcoreapp2.1\ILoveMyHome.dll.config" />
+    </ItemGroup>
+
+</Project>
