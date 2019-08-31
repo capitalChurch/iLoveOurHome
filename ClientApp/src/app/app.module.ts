@@ -16,6 +16,7 @@ import localePt from '@angular/common/locales/pt';
 import {CapitalizarPipe} from "../pipes/capitalizar.pipe";
 import { OfferComponent } from './offer/offer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FooterComponent } from './footer/footer.component';
 
 registerLocaleData(localePt);
 
@@ -32,7 +33,8 @@ registerLocaleData(localePt);
     HowMuchIsMissingComponent,
     CapitalizarPipe,
     OfferComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule
