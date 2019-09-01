@@ -42,5 +42,14 @@ namespace Tests
             
             Assert.IsNotEmpty(result);
         }
+
+        [Test]
+        public async Task ReadFileAws()
+        {
+            var target = new S3Repository();
+            var result = await target.ReadFile("984926892");
+            
+            Assert.IsNotEmpty(result);
+        }
     }
 }

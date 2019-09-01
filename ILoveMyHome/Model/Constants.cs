@@ -10,8 +10,9 @@ namespace ILoveMyHome.Model
         AwsBucketName,
     }
 
-    public class Constants
+    public static class Constants
     {
+        public const string nameFileAim = "aim";
         private static readonly Dictionary<AwsConstants, string> dic = new Dictionary<AwsConstants, string>
         {
             {AwsConstants.AwsIdAccessKey, "awsIdAccessKey"},

@@ -6,12 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace ILoveMyHome.Controllers
 {
     [Route("api/[controller]")]
-    public class PaypalWebHook : Controller
+    public class PaypalWebHookController : Controller
     {
         private static Random _random = new Random();
         private readonly S3Repository _repo;
 
-        public PaypalWebHook(S3Repository repo)
+        public PaypalWebHookController(S3Repository repo)
         {
             this._repo = repo;
         }

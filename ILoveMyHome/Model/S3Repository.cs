@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Amazon;
 using Amazon.Runtime;
 using Amazon.S3;
+using Amazon.S3.Model;
 using Amazon.S3.Transfer;
 using Newtonsoft.Json;
 
@@ -38,12 +39,12 @@ namespace ILoveMyHome.Model
             };
 
             var text = JsonConvert.SerializeObject(obj);
-            
+
             var tw = new StreamWriter(ms);
             tw.Write(text);
             tw.Flush();
             ms.Position = 0;
-            
+
             var utility = new TransferUtility(_client);
             await utility.UploadAsync(uploadRequest);
         }
@@ -53,6 +54,22 @@ namespace ILoveMyHome.Model
             var response = await _client.ListBucketsAsync();
 
             return response.Buckets.Select(x => x.BucketName).ToList();
+        }
+
+        public async Task<string> ReadFile(string id)
+        {
+            var request = new GetObjectRequest
+            {
+                BucketName = awsBucketName,
+                Key = id
+            };
+            
+            using var response = await _client.GetObjectAsync(request);
+            using var responseStream = response.ResponseStream;
+            using var reader = new StreamReader(responseStream);
+
+            var text = reader.ReadToEnd();
+            return text;
         }
     }
 }

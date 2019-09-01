@@ -17,6 +17,8 @@ import {CapitalizarPipe} from "../pipes/capitalizar.pipe";
 import { OfferComponent } from './offer/offer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
+import {HowMuchIsMissingService} from "../service/howMuchIsMissingService";
+import {HttpClientModule} from "@angular/common/http";
 
 registerLocaleData(localePt);
 
@@ -37,10 +39,12 @@ registerLocaleData(localePt);
     FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [
     TranslateService,
+    HowMuchIsMissingService,
     {provide: LOCALE_ID, useValue: 'pt'}
   ],
   bootstrap: [AppComponent]

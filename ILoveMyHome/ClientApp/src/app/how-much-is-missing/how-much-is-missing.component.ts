@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {LanguageResource} from "../../model/languageResource";
 import {TranslateService} from "../../service/translateService";
-import {hourAim} from "../../model/constants";
+import {ourAim} from "../../model/constants";
+import {HowMuchIsMissingService} from "../../service/howMuchIsMissingService";
 
 @Component({
   selector: 'app-how-much-is-missing',
@@ -9,10 +10,11 @@ import {hourAim} from "../../model/constants";
   styleUrls: ['./how-much-is-missing.component.scss']
 })
 export class HowMuchIsMissingComponent implements OnInit {
-  public readonly aim: number = hourAim;
+  public readonly aim: number = ourAim;
+  public howMuchIsMissing: number = ourAim;
 
   public t: LanguageResource;
-  constructor(private translateService: TranslateService) {
+  constructor(private translateService: TranslateService, private howMuchService: HowMuchIsMissingService) {
     this.subscribe();
   }
 
@@ -21,9 +23,6 @@ export class HowMuchIsMissingComponent implements OnInit {
 
   private subscribe = (): void => {
     this.translateService.resource.subscribe(x => this.t = x);
+    this.howMuchService.howMuchIsMissing.subscribe(x => this.howMuchIsMissing = x);
   };
-
-  public get actualCollected(): number{
-   return this.aim - 645760
-  }
 }
