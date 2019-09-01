@@ -13,9 +13,9 @@ namespace ILoveMyHome.Model
 {
     public class S3Repository
     {
-        private readonly string awsIdAccessKey = Environment.GetEnvironmentVariable(VariableNames.AwsIdAccessKey, EnvironmentVariableTarget.Machine);
-        private readonly string awsSecretKey = Environment.GetEnvironmentVariable(VariableNames.AwsSecretKey, EnvironmentVariableTarget.Machine);
-        private readonly string awsBucketName = Environment.GetEnvironmentVariable(VariableNames.AwsBucketName, EnvironmentVariableTarget.Machine);
+        private readonly string awsIdAccessKey = Constants.Get(AwsConstants.AwsIdAccessKey);
+        private readonly string awsSecretKey = Constants.Get(AwsConstants.AwsSecretKey);
+        private readonly string awsBucketName = Constants.Get(AwsConstants.AwsBucketName);
         private readonly AWSCredentials credentials;
         private readonly AmazonS3Client _client;
 

@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using ILoveMyHome.Model;
 using NUnit.Framework;
@@ -12,14 +11,15 @@ namespace Tests
         {
         }
 
-        [TestCase(VariableNames.AwsIdAccessKey)]
-        [TestCase(VariableNames.AwsBucketName)]
-        [TestCase(VariableNames.AwsIdAccessKey)]
-        public void TestGetEnvironmentVariables(string variableName)
+        [TestCase(AwsConstants.AwsIdAccessKey)]
+        [TestCase(AwsConstants.AwsBucketName)]
+        [TestCase(AwsConstants.AwsSecretKey)]
+        public void TestGetEnvironmentVariables(AwsConstants variableName)
         {
-            var variable = Environment.GetEnvironmentVariable(variableName, EnvironmentVariableTarget.Machine);
-            
-            Assert.IsNotNull(variable);
+            var result = Constants.Get(variableName);
+
+            Assert.IsNotNull(result);
+            Assert.IsNotEmpty(result);
         }
 
         [Test]
