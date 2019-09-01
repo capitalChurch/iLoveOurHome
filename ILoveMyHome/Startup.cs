@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using ILoveMyHome.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,19 +18,19 @@ namespace ILoveMyHome
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<S3Repository>();
             services.AddMvc();
             services.AddSpaStaticFiles(cfg => { cfg.RootPath = "ClientApp/dist"; });
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
-                app.UseDeveloperExceptionPage();
+            app.UseDeveloperExceptionPage();
 
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
-            app.UseMvc(routes => { routes.MapRoute("default", "{controller}/{id?}"); });
+            app.UseMvc();
             
             app.UseSpa(spa =>
             {
