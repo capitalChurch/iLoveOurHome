@@ -11,7 +11,7 @@ export const en: LanguageResource =
     offer: "offer",
     contact: "contact"
   },
-  iLoveMyHome:{
+  iLoveOurHome:{
     title: "i love our home",
     instagram: "https://www.instagram.com/batistadacapital/",
     facebook: "https://www.facebook.com/igrejabcapital/",

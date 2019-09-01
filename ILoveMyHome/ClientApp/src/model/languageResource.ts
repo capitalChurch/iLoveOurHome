@@ -11,7 +11,7 @@ export interface LanguageResource {
     contact: string;
   };
 
-  iLoveMyHome:{
+  iLoveOurHome:{
     title: string;
     instagram: string;
     facebook: string;
