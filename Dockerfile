@@ -7,6 +7,6 @@ RUN npx ng build --prod --base-href /i-love-our-home/
 
 FROM nginx:alpine
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /app/dist /usr/share/nginx/html/i-love-our-home/
+COPY --from=build /app/dist /usr/share/nginx/html/
 
 EXPOSE 80
